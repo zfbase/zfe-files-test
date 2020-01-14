@@ -1,0 +1,16 @@
+Articles:
+  comment: Статьи
+  connection: dbh
+  actAs:
+    ZFE_Model_Template_BaseZfeFields:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+      comment: Идентификатор
+    title:
+      type: string(125)
+      comment: Название

@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+/public/build
+/assets/*.mwb.bak
+/application/configs/local.ini
+.idea
+/data/files

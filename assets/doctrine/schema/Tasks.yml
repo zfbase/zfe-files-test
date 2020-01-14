@@ -1,0 +1,42 @@
+Tasks:
+  connection: dbh
+  tableName: tasks
+  actAs:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+      comment: Идентификатор
+    created_at:
+      type: timestamp(25)
+      notnull: true
+      comment: Дата добавления
+    scheduled_at:
+      type: timestamp(25)
+      comment: Плановое время запуска
+    done_at:
+      type: timestamp(25)
+      comment: Окончание исполнения
+    performer_code:
+      type: string(63)
+      notnull: true
+      comment: Код исполнителя
+    related_id:
+      type: integer(4)
+      unsigned: true
+      comment: Объект исполнения
+    state:
+      type: integer(1)
+      unsigned: true
+      notnull: true
+      default: '0'
+      comment: Состояние
+    errors:
+      type: string(1000)
+      comment: Ошибки

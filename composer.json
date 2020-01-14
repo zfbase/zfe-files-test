@@ -1,6 +1,6 @@
 {
-    "name": "zfbase/zfe-skeleton",
-    "description": "Skeleton application for zfe project",
+    "name": "zfbase/zfe-files-test",
+    "description": "Test project for zfe-files",
     "type": "project",
     "license": "MIT",
     "authors": [

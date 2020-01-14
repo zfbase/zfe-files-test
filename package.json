@@ -1,7 +1,7 @@
 {
-  "name": "zfe-skeleton",
+  "name": "zfe-files-test",
   "version": "1.0.0",
-  "description": "Skeleton application for zfe project",
+  "description": "Test project for zfe-files",
   "license": "MIT",
   "scripts": {
     "build": "webpack",

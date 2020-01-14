@@ -7,8 +7,7 @@
     "build": "webpack",
     "watch": "webpack -d --watch",
     "backend": "cd public && APPLICATION_ENV=development php -S 0:8000",
-    "start": "concurrently 'npm run backend' 'npm run watch' 'npm run tunnel:mysql'",
-    "tunnel:mysql": "ssh -L 3306:127.0.0.1:3306 dev.archive.systems",
+    "start": "concurrently 'npm run backend' 'npm run watch'",
     "lint": "eslint src"
   },
   "minimum-stability": "dev",

@@ -19,8 +19,8 @@ Files:
       type: integer(4)
       unsigned: true
       comment: ID записи, к которой привязан файл
-    type:
-      type: integer(1)
+    schema_code:
+      type: string(31)
       unsigned: true
       comment: Тип связи с записью, к которой привязан файл (код в схеме)
     title:

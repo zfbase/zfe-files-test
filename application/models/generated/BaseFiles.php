@@ -10,7 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('Files', 'dbh');
  * @property integer $id Идентификатор
  * @property string $model_name Модель записи, к которой привязан файл
  * @property integer $item_id ID записи, к которой привязан файл
- * @property integer $type Тип связи с записью, к которой привязан файл (код в схеме)
+ * @property integer $schema_code Тип связи с записью, к которой привязан файл (код в схеме)
  * @property string $title Название исходного файла
  * @property integer $size Размер файла в байтах
  * @property string $hash Хэш сумма от файла
@@ -46,11 +46,10 @@ abstract class BaseFiles extends AbstractRecord
              'comment' => 'ID записи, к которой привязан файл',
              'length' => '4',
              ));
-        $this->hasColumn('type', 'integer', 1, array(
-             'type' => 'integer',
-             'unsigned' => true,
+        $this->hasColumn('schema_code', 'string', 31, array(
+             'type' => 'string',
              'comment' => 'Тип связи с записью, к которой привязан файл (код в схеме)',
-             'length' => '1',
+             'length' => '31',
              ));
         $this->hasColumn('title', 'string', 511, array(
              'type' => 'string',

@@ -36,15 +36,27 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        // exclude: /(node_modules)/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env'],
-            plugins: ['babel-plugin-transform-object-rest-spread'],
+            presets: ['babel-preset-env', 'babel-preset-react'],
+            plugins: [
+              ['transform-runtime', {
+                helpers: false,
+                polyfill: false,
+                regenerator: false,
+              }],
+              'babel-plugin-transform-object-rest-spread',
+              'babel-plugin-transform-runtime',
+            ],
           },
         },
+        include: [
+          path.resolve(__dirname, 'assets'),
+          path.resolve(__dirname, 'node_modules/zfe'),
+          path.resolve(__dirname, 'node_modules/zfe-files'),
+        ],
       },
       {
         test: /\.scss$/,
@@ -64,6 +76,9 @@ const config = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
 };
 

@@ -5,5 +5,5 @@
  */
 trait Application_Form_Helpers
 {
-    use ZFE_Form_Helpers;
+    use ZfeFiles_Form_Helpers;
 }

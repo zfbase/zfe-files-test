@@ -3,6 +3,7 @@
 /**
  * Управление файлами.
  */
-class FilesController extends ZFE_Controller_Default_Files
+class FilesController extends ZfeFiles_Controller_DefaultAjax
 {
+    protected static $_modelName = Files::class;
 }

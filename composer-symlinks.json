@@ -1,0 +1,22 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../zfe",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../zfe-files",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "zfbase/zfe": "@dev",
+        "zfbase/zfe-files": "@dev"
+    }
+}

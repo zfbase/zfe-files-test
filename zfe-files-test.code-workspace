@@ -5,6 +5,10 @@
          "path": "."
       },
       {
+         "name": "ZFE Files",
+         "path": "vendor/zfbase/zfe-files"
+      },
+      {
          "name": "ZFE (php)",
          "path": "vendor/zfbase/zfe"
       },

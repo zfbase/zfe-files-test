@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b614f345cf3e3d97f6ccc9d447a11c3",
+    "content-hash": "b1a0252a4629d996fa099f69ee571d1e",
     "packages": [
         {
             "name": "foolz/sphinxql-query-builder",
@@ -848,16 +848,17 @@
         {
             "name": "zfbase/zfe",
             "version": "1.35.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zfbase/zfe.git",
+            "dist": {
+                "type": "path",
+                "url": "../zfe",
                 "reference": "b66645104b3264c40b91a9dbe4951eb44e7207aa"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zfbase/zfe/zipball/b66645104b3264c40b91a9dbe4951eb44e7207aa",
-                "reference": "b66645104b3264c40b91a9dbe4951eb44e7207aa",
-                "shasum": ""
+            "archive": {
+                "exclude": [
+                    "/assets",
+                    "/src",
+                    "/test"
+                ]
             },
             "require": {
                 "ext-json": "*",
@@ -881,10 +882,17 @@
                     "ZFE_": "library/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "include-path": [
                 "library/"
             ],
+            "scripts": {
+                "lint": [
+                    "php-cs-fixer fix --diff --dry-run"
+                ],
+                "fix": [
+                    "php-cs-fixer fix"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -915,21 +923,24 @@
                 }
             ],
             "description": "ZFE – платформа для построения редакторских интерфейсов",
-            "time": "2020-01-10T18:23:12+00:00"
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "zfbase/zfe-files",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zfbase/zfe-files.git",
-                "reference": "23a121d20aee79754153149c0ce7ee799db51662"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zfbase/zfe-files/zipball/23a121d20aee79754153149c0ce7ee799db51662",
-                "reference": "23a121d20aee79754153149c0ce7ee799db51662",
-                "shasum": ""
+                "type": "path",
+                "url": "../zfe-files",
+                "reference": "d2ecedf168f1bef9d48019b2d73f15bb85db2792"
+            },
+            "archive": {
+                "exclude": [
+                    "/assets",
+                    "/examples",
+                    "/tests"
+                ]
             },
             "require": {
                 "php": ">=7.1",
@@ -941,7 +952,14 @@
                     "ZfeFiles_": "library/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "lint": [
+                    "php-cs-fixer fix --diff --dry-run"
+                ],
+                "fix": [
+                    "php-cs-fixer fix"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -963,7 +981,9 @@
                 }
             ],
             "description": "Единая точка загрузки и управления файлами для приложений на ZFE",
-            "time": "2020-02-12T15:04:16+00:00"
+            "transport-options": {
+                "symlink": true
+            }
         }
     ],
     "packages-dev": [
@@ -1554,12 +1574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "0f0cd82cbaea73861e9019cf91180a5750a04fa1"
+                "reference": "5f2a8099327a3bcb19475a9beb383ceb9d2f1886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/0f0cd82cbaea73861e9019cf91180a5750a04fa1",
-                "reference": "0f0cd82cbaea73861e9019cf91180a5750a04fa1",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/5f2a8099327a3bcb19475a9beb383ceb9d2f1886",
+                "reference": "5f2a8099327a3bcb19475a9beb383ceb9d2f1886",
                 "shasum": ""
             },
             "require": {
@@ -1641,7 +1661,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2020-02-11T20:40:55+00:00"
+            "time": "2020-02-12T16:16:24+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1716,12 +1736,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "4771454c37ada3ad55a8cbc2501a1a69b8fa588b"
+                "reference": "63793536355a64085fe7a602c9e2ef8bf32eb811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/4771454c37ada3ad55a8cbc2501a1a69b8fa588b",
-                "reference": "4771454c37ada3ad55a8cbc2501a1a69b8fa588b",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/63793536355a64085fe7a602c9e2ef8bf32eb811",
+                "reference": "63793536355a64085fe7a602c9e2ef8bf32eb811",
                 "shasum": ""
             },
             "require": {
@@ -1759,7 +1779,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2020-02-12T12:54:07+00:00"
+            "time": "2020-02-12T18:05:15+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1767,12 +1787,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "e193ff330a0f28b5e5f65ed3d804f5e2a89376e3"
+                "reference": "c73b502efd02beb2602500aa36793fb405e383ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e193ff330a0f28b5e5f65ed3d804f5e2a89376e3",
-                "reference": "e193ff330a0f28b5e5f65ed3d804f5e2a89376e3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c73b502efd02beb2602500aa36793fb405e383ac",
+                "reference": "c73b502efd02beb2602500aa36793fb405e383ac",
                 "shasum": ""
             },
             "require": {
@@ -1788,7 +1808,7 @@
                 "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
             },
             "suggest": {
-                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
@@ -1830,7 +1850,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2020-02-04T14:54:51+00:00"
+            "time": "2020-02-12T23:13:46+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2137,12 +2157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "50e77ace682d81779b87e554bdbfc7fb0e6f8d53"
+                "reference": "edea3e869367921987704325b997a80cdaea6d66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/50e77ace682d81779b87e554bdbfc7fb0e6f8d53",
-                "reference": "50e77ace682d81779b87e554bdbfc7fb0e6f8d53",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/edea3e869367921987704325b997a80cdaea6d66",
+                "reference": "edea3e869367921987704325b997a80cdaea6d66",
                 "shasum": ""
             },
             "require": {
@@ -2182,7 +2202,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-12T07:18:08+00:00"
+            "time": "2020-02-12T20:05:04+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
